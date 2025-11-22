@@ -1,11 +1,17 @@
 # gson-stream-iterator
 
-A Java Maven project with groupId: `gson-utils` and artifactId: `gson-stream-iterator`.
+A utility JAR library for Gson stream iteration with groupId: `gson-utils` and artifactId: `gson-stream-iterator`.
 
 ## Prerequisites
 
 - Java 17 or later
 - Apache Maven 3.6 or later
+
+## Dependencies
+
+- **Gson**: 2.11.0
+- **Jackson**: 2.18.2 (core, databind, annotations)
+- **JUnit Jupiter**: 5.10.1 (test)
 
 ## Building the Project
 
@@ -21,18 +27,22 @@ To run tests:
 mvn test
 ```
 
-To package the project:
+To package the utility JAR:
 
 ```bash
 mvn clean package
 ```
 
-## Running the Application
+## Usage
 
-After building, you can run the application with:
+Add this utility JAR as a dependency in your project:
 
-```bash
-java -cp target/gson-stream-iterator-1.0-SNAPSHOT.jar gsonutils.App
+```xml
+<dependency>
+    <groupId>gson-utils</groupId>
+    <artifactId>gson-stream-iterator</artifactId>
+    <version>1.0-SNAPSHOT</version>
+</dependency>
 ```
 
 ## Project Structure
@@ -45,15 +55,14 @@ gson-stream-iterator/
     ├── main/
     │   └── java/
     │       └── gsonutils/
-    │           └── App.java
     └── test/
         └── java/
             └── gsonutils/
-                └── AppTest.java
 ```
 
 ## Configuration
 
 - **Java Version**: 17
+- **Gson Version**: 2.11.0
+- **Jackson Version**: 2.18.2
 - **JUnit Version**: 5.10.1
-- **Maven Compiler Plugin**: 3.8.0
